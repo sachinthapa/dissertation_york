@@ -1,15 +1,22 @@
 Pipeline at a glance
 
 raw Kaggle CSVs
+
    │
    ▼
 [1] corpus acquisition + cleaning  ──►  cleaned CSVs (per corpus)
+
    │
+   
    ▼
 [2] target-word filtering (BERT only)  ──►  ./filtered/*.csv
+
    │
+   
    ├──► [3] Word2Vec training + Procrustes alignment  ──►  .bin models + SNR tables
+   
    │
+   
    └──► [4] BERT centroid extraction  ──►  cosine-distance tables
 
 
